@@ -40,7 +40,7 @@ end
 
       upload!(tarball, upload_path)
       local_tarball_path = File.join(releases_path, File.basename(tarball))
-      execute :tar, "-xzf", local_tarball_path, "-C", releases_path
+      execute :tar, "-xzhf", local_tarball_path, "-C", releases_path
       execute :rm, local_tarball_path
     end
 
